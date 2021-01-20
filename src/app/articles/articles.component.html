@@ -1,0 +1,12 @@
+<div *ngFor='let article of articles'>
+    <h1>
+        <a [routerLink]='["/article", article.id]'>
+            {{article.header}}
+        </a>
+    </h1>
+</div>
+
+<div>
+    <h1>Add new article</h1>
+    <app-add-article (addedNewArticle)="addNewArticle($event)"></app-add-article>
+</div>
